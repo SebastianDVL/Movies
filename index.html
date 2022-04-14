@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="controller.js" type="module" defer></script>
+    <script src="js/controller.js" type="module" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Free Movies</title>
 </head>
-<body>
-    
+<body class="font-sans select-none">
+    <header>
+        <div class="h-24 bg-slate-900 w-100 text-4xl text-white px-8 font-bold flex justify-between items-center">
+            <div class="flex items-center text-amber-500 ">
+                <i class="fa-solid fa-film mr-2"> </i>
+                <p>MOVIES</p>
+            </div>
+           
+
+        </div>
+    </header>
+    <main>
+        <aside>
+            <div class="w-screen lg:w-1/5 h-screen lg:float-left bg-slate-700"></div>
+        </aside>
+        <section class="w-screen lg:w-4/5 lg:float-right">
+            <div class="bg-slate-800 p-8">
+                <p class="text-white text-6xl font-semibold">Busca y descubre miles de peliculas</p>
+                <div class="flex items-center mt-8">
+                    <input type="text" class=" px-3 py-2 h-12 bg-white border-0 caret-amber-600 border-slate-300 placeholder-slate-400 focus:outline-none focus:border-amber-600 focus:border-2 block w-full rounded-l-3xl sm:text-sm " placeholder="Busca una pelicula...">
+                    <button class="w-32 bg-amber-600 h-12 text-white rounded-r-3xl hover:bg-amber-700"><i class="fa-solid fa-magnifying-glass"></i></button> 
+                </div>
+                
+            </div>
+        </section>
+        <section class="w-screen lg:w-4/5 lg:float-right">
+            <article>
+                <div class="mx-8">
+                    <h2 class="font-bold text-6xl">Popular</h2>
+                    <div class=" flex w-full overflow-y-scroll snap-x h-fit" id="populares">
+                    </div>
+                </div>
+            </article>
+           
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <template data-populares>
+        <div class="flex-[0_0_50%] md:flex-[0_0_25%] p-[.25rem] mad-w-[50%] md:max-w-[25%]">
+            <img src="" alt="" class="aspect-square rounded-t-lg">
+            <div class="">
+                <p class="text-lg"></p>
+                <h5></h5>
+            </div>
+        </div>
+    </template>
+    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
 </body>
 </html>

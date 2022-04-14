@@ -1,0 +1,11 @@
+#populares::-webkit-scrollbar {
+    width: 0;             
+}
+    #populares::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.2);  
+        margin:4px;
+    }
+    #populares::-webkit-scrollbar-thumb {
+            background-color: #d97706; 
+            cursor: pointer;
+    }
