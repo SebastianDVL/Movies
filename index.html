@@ -7,9 +7,9 @@
     <script src="js/controller.js" type="module" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Free Movies</title>
+    <title>Movies</title>
 </head>
-<body class="font-sans select-none">
+<body class="font-sans select-none  bg-[url('img/bg.webp')] bg-center bg-fixed bg-cover">
     <header>
         <div class="h-24 bg-slate-900 w-100 text-4xl text-white px-8 font-bold flex justify-between items-center">
             <div class="flex items-center text-amber-500 ">
@@ -22,9 +22,14 @@
     </header>
     <main>
         <aside>
-            <div class="w-screen lg:w-1/5 h-screen lg:float-left bg-slate-700"></div>
+            <div class="w-screen lg:w-1/5 lg:float-left bg-slate-700/80 text-white fixed">
+                <!-- <h2 class="font-bold text-2xl mb-5 text-center">Proximamente...</h2> -->
+                <div id="Estrenos"class=" lex-column overflow-y-scroll h-screen">
+
+                </div>
+            </div>
         </aside>
-        <section class="w-screen lg:w-4/5 lg:float-right">
+        <!-- <section class="w-screen lg:w-4/5 lg:float-right">
             <div class="bg-slate-800 p-8">
                 <p class="text-white text-6xl font-semibold">Busca y descubre miles de peliculas</p>
                 <div class="flex items-center mt-8">
@@ -33,15 +38,23 @@
                 </div>
                 
             </div>
-        </section>
-        <section class="w-screen lg:w-4/5 lg:float-right">
+        </section> -->
+        <section class="w-screen lg:w-4/5 lg:float-right bg-slate-900/70 text-white">
             <article>
-                <div class="mx-8">
-                    <h2 class="font-bold text-6xl">Popular</h2>
-                    <div class=" flex w-full overflow-y-scroll snap-x h-fit" id="populares">
+                <div class="mx-8 flex-column ">
+                    <h2 class="font-bold text-6xl mb-5 text-center">Popular</h2>
+                    <div class=" flex w-full overflow-x-scroll snap-x h-fit" id="populares">
                     </div>
                 </div>
             </article>
+            <article>
+                <div class="mx-8 flex-column ">
+                    <h2 class="font-bold text-6xl mb-5 text-center">+ Valorados</h2>
+                    <div class=" flex w-full overflow-x-scroll snap-x h-fit" id="rated">
+                    </div>
+                </div>
+            </article>
+           
            
         </section>
     </main>
@@ -52,8 +65,12 @@
     <template data-populares>
         <div class="flex-[0_0_50%] md:flex-[0_0_25%] p-[.25rem] mad-w-[50%] md:max-w-[25%]">
             <img src="" alt="" class="aspect-square rounded-t-lg">
-            <div class="">
-                <p class="text-lg"></p>
+            <div class="bg-slate-800 text-white p-3 h-32">
+                <div class="flex items-center"> 
+                    <input type="range" class="w-full appearance-none bg-amber-100 rounded bg-no-repeat mr-2 h-2">
+                    <h6></h6>
+                </div>
+                <p class="text-lg font-bold"></p>
                 <h5></h5>
             </div>
         </div>
