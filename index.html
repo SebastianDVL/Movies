@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Movies</title>
 </head>
-<body class="font-sans select-none  bg-[url('img/bg.webp')] bg-center bg-fixed bg-cover">
+<body class="font-sans select-none  bg-[url('img/bg2.jpg')] bg-[length:100%_100%] bg-fixed">
     <header>
-        <div class="h-24 bg-slate-900 w-100 text-4xl text-white px-8 font-bold flex justify-between items-center">
+        <div class="h-24 bg-slate-900/90 w-100 text-4xl text-white px-8 font-bold flex justify-between items-center">
             <div class="flex items-center text-amber-500 ">
                 <i class="fa-solid fa-film mr-2"> </i>
                 <p>MOVIES</p>
@@ -22,35 +22,41 @@
     </header>
     <main>
         <aside>
-            <div class="w-screen lg:w-1/5 lg:float-left bg-slate-700/80 text-white fixed">
+            <div class="hidden w-screen lg:w-1/5 lg:float-left bg-slate-700/80 text-white fixed">
                 <!-- <h2 class="font-bold text-2xl mb-5 text-center">Proximamente...</h2> -->
                 <div id="Estrenos"class=" lex-column overflow-y-scroll h-screen">
 
                 </div>
             </div>
         </aside>
-        <!-- <section class="w-screen lg:w-4/5 lg:float-right">
-            <div class="bg-slate-800 p-8">
-                <p class="text-white text-6xl font-semibold">Busca y descubre miles de peliculas</p>
-                <div class="flex items-center mt-8">
-                    <input type="text" class=" px-3 py-2 h-12 bg-white border-0 caret-amber-600 border-slate-300 placeholder-slate-400 focus:outline-none focus:border-amber-600 focus:border-2 block w-full rounded-l-3xl sm:text-sm " placeholder="Busca una pelicula...">
-                    <button class="w-32 bg-amber-600 h-12 text-white rounded-r-3xl hover:bg-amber-700"><i class="fa-solid fa-magnifying-glass"></i></button> 
-                </div>
-                
-            </div>
-        </section> -->
-        <section class="w-screen lg:w-4/5 lg:float-right bg-slate-900/70 text-white">
+    
+        <section class="w-screen bg-slate-900/60 text-white py-10">
             <article>
-                <div class="mx-8 flex-column ">
-                    <h2 class="font-bold text-6xl mb-5 text-center">Popular</h2>
-                    <div class=" flex w-full overflow-x-scroll snap-x h-fit" id="populares">
+                <div class="mx-8 flex-column mb-7">
+                    <h2 class="font-bold text-3xl">Popular</h2>
+                    <div class=" flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x" id="populares">
                     </div>
                 </div>
             </article>
             <article>
-                <div class="mx-8 flex-column ">
-                    <h2 class="font-bold text-6xl mb-5 text-center">+ Valorados</h2>
-                    <div class=" flex w-full overflow-x-scroll snap-x h-fit" id="rated">
+                <div class="mx-8 flex-column mb-7">
+                    <h2 class="font-bold text-3xl my-2">Top Rated</h2>
+                    <div class=" flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x" id="rated">
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="mx-8 flex-column mb-7">
+                    <h2 class="font-bold text-3xl my-2">Playing Now</h2>
+                    <div class=" flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x" id="cartelera">
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="mx-8 flex-column mb-7">
+                    <h2 class="font-bold text-3xl my-2">Upcoming</h2>
+                    <div class=" flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x" id="proximamente">
                     </div>
                 </div>
             </article>
@@ -63,8 +69,13 @@
     </footer>
 
     <template data-populares>
-        <div class="flex-[0_0_50%] md:flex-[0_0_25%] p-[.25rem] mad-w-[50%] md:max-w-[25%]">
-            <img src="" alt="" class="aspect-square rounded-t-lg">
+        <div class="flex-[0_0_50%] md:flex-[0_0_20%] p-[.25rem] mad-w-[50%] md:max-w-[20%] relative">
+            <div class="group aspect-square rounded-t-lg bg-[length:100%_100%]">
+                <div class="group-hover:bg-emerald-600/60 w-full h-full">
+                    <button id="" class="rounded-full hover:scale-105 shadow-sm bg-blue-700 w-12 h-12 absolute top-1/3 left-1/2 -translate-x-1/2 invisible group-hover:visible"><i class="fa-solid fa-angles-right"></i></button>
+                </div>
+                 
+            </div>
             <div class="bg-slate-800 text-white p-3 h-32">
                 <div class="flex items-center"> 
                     <input type="range" class="w-full appearance-none bg-amber-100 rounded bg-no-repeat mr-2 h-2">
@@ -73,6 +84,7 @@
                 <p class="text-lg font-bold"></p>
                 <h5></h5>
             </div>
+        
         </div>
     </template>
     <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>

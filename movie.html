@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/showMovieInfo.js" type="module" defer></script>
+    <title></title>
+</head>
+<body>
+    <header>
+        <div class="h-24 bg-slate-900 w-100 text-4xl text-white px-8 font-bold flex justify-between items-center">
+            <a href="index.html">
+                <div class="flex items-center text-amber-500 ">
+                    <i class="fa-solid fa-film mr-2"> </i>
+                    <p>MOVIES</p>
+                </div>
+            </a>
+           
+
+        </div>
+    </header>
+    <main>
+        <section class="w-screen h-[80vh] text-white flex">
+            <div class="w-1/3 h-full bg-[length:100%_100%] group" id="poster">
+                    <div class="w-full h-full group-hover:bg-emerald-700/70 flex place-items-center place-content-center transition-all">
+                        <i class="fa-solid fa-maximize group-hover:visible invisible transition-all text-4xl hover:scale-110 cursor-pointer"></i>
+                    </div>
+            </div>
+            <div class=" w-2/3 h-full bg-[length:100%_100%]"  id="info">
+                <div class="bg-emerald-600/60 w-full h-full p-8">
+                    <h1 class="text-5xl font-bold mb-2"></h1>
+                    <h2></h2>
+                    <p></p>
+                </div>
+                
+            </div>
+               
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
+</body>
+</html>
