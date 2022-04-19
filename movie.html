@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/showMovieInfo.js" type="module" defer></script>
+    <link rel="stylesheet" href="css/estilos.css">
     <title></title>
 </head>
-<body>
+<body class="select-none">
     <header>
         <div class="h-24 bg-slate-900 w-100 text-4xl text-white px-8 font-bold flex justify-between items-center">
             <a href="index.html">
@@ -22,26 +23,49 @@
         </div>
     </header>
     <main>
-        <section class="w-screen h-[80vh] text-white flex">
-            <div class="w-1/3 h-full bg-[length:100%_100%] group" id="poster">
-                    <div class="w-full h-full group-hover:bg-emerald-700/70 flex place-items-center place-content-center transition-all">
+        <section class="w-screen h-[80vh] text-white md:flex">
+            <div class="md:w-1/3 h-full bg-[length:100%_100%] group" id="poster">
+                    <div class="w-full h-full flex place-items-center place-content-center transition-all">
                         <i class="fa-solid fa-maximize group-hover:visible invisible transition-all text-4xl hover:scale-110 cursor-pointer"></i>
                     </div>
             </div>
-            <div class=" w-2/3 h-full bg-[length:100%_100%]"  id="info">
-                <div class="bg-emerald-600/60 w-full h-full p-8">
+            <div class=" md:w-2/3 h-full bg-[length:100%_100%]"  id="info">
+                <div class="w-full h-full overflow-y-scroll snap-y p-8">
+                    <div class="flex items-center snap-start mb-5"> 
+                        <input type="range" class="w-full appearance-none bg-amber-100 rounded bg-no-repeat mr-2 h-2">
+                        <h4></h4>
+                    </div>
                     <h1 class="text-5xl font-bold mb-2"></h1>
-                    <h2></h2>
-                    <p></p>
+                    <h2 class="text-amber-200 italic mb-4"></h2>   
+                    <h6 class="text-lg font-bold text-amber-600 snap-start">Release Date</h6>  
+                    <h3 class="mb-4"></h3>  
+                    <h6 class="text-lg font-bold text-amber-600 snap-start">Genre(s)</h6>
+                    <h6 id="genres" class="mb-4"></h6>             
+                    <h6 class="text-lg font-bold text-amber-600 snap-start">Overview</h6>
+                    <p class="mb-6"></p>
+                  
+                    <h6 class="text-lg font-bold text-amber-600 snap-start">Credits</h6>
+                    <div class="grid grid-cols-2 md:grid-cols-4 w-full gap-6" id="crew">
+
+                    </div>
                 </div>
                 
             </div>
-               
+            
+        </section>
+        <section class="px-20 py-10">
+            <div id="cast">
+                <h1>Cast</h1>
+                <div class="personalized-scroll flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x">
+
+                </div>
+            </div>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
 </body>
 </html>
