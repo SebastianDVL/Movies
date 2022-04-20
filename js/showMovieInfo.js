@@ -50,6 +50,20 @@ async function printInfo(){
         cont.appendChild(name)
         inf.querySelector('#crew').appendChild(cont)
     })
+    const castContainer = document.querySelector('#cast')
+    movieCredits.cast.forEach(actor =>{
+        let actorContainer = document.querySelector('[data-cast]').content.cloneNode(true).children[0]
+        if(actor.profile_path){
+            actorContainer.querySelector('.h-80').classList.add(`bg-[url('https://image.tmdb.org/t/p/original${actor.profile_path}')]`)
+        }else{
+             actorContainer.querySelector('.h-80').classList.add(`bg-[url('https://intratex.com/public/images/NoImagePlaceholder.png')]`)  
+        }
+     
+        actorContainer.querySelector('p').textContent = actor.name
+        actorContainer.querySelector('h5').textContent = actor.character
+
+        castContainer.appendChild(actorContainer)
+    })
 }
 
 printInfo();

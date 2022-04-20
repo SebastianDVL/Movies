@@ -54,17 +54,40 @@
             
         </section>
         <section class="px-20 py-10">
-            <div id="cast">
-                <h1>Cast</h1>
-                <div class="personalized-scroll flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x">
+            <aside>
+                <div class="w-1/5 float-left ">
 
                 </div>
-            </div>
+            </aside>
+            <article>
+                <div class="w-4/5 float-right">
+                    <h1 class="text-4xl mb-2">Cast</h1>
+                    <div class="personalized-scroll flex w-full overflow-x-scroll snap-x h-fit pb-6 touch-pan-x" id="cast">
+    
+                    </div>
+                </div>
+            </article>
+            <article>
+
+            </article>
+          
         </section>
     </main>
     <footer>
 
     </footer>
+
+    <template data-cast>
+        <div class="flex-[0_0_50%] md:flex-[0_0_20%] p-[.25rem] mad-w-[50%] md:max-w-[20%] relative ">
+            <div class="h-80 rounded-t-lg bg-[length:100%_100%] flex justify-end items-end hover:-translate-y-6 hover:transition-all cursor-pointer">
+                <div class="bg-gradient-to-t from-black to-transparent text-white p-3 h-32 flex-column w-full">
+                    <p class="text-lg font-bold mt-8"></p>
+                    <h5></h5>
+                </div>
+            
+            </div>
+        </div>
+    </template>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="https://kit.fontawesome.com/30ec5c3528.js" crossorigin="anonymous"></script>
 </body>
